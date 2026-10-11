@@ -140,20 +140,64 @@
 			],
 			"terms": [
 				{
-					"slug": "webdev",
-					"label": "Web Development"
+					"slug": "tutorial",
+					"label": "Tutorial"
 				},
 				{
-					"slug": "opinion",
-					"label": "Opinion"
+					"slug": "pemula",
+					"label": "Pemula"
+				},
+				{
+					"slug": "tips-tricks",
+					"label": "Tips & Tricks"
+				},
+				{
+					"slug": "frontend",
+					"label": "Frontend"
+				},
+				{
+					"slug": "backend",
+					"label": "Backend"
+				},
+				{
+					"slug": "javascript",
+					"label": "JavaScript"
+				},
+				{
+					"slug": "typescript",
+					"label": "TypeScript"
+				},
+				{
+					"slug": "sql",
+					"label": "SQL"
+				},
+				{
+					"slug": "design-system",
+					"label": "Design System"
+				},
+				{
+					"slug": "motion-graphics",
+					"label": "Motion Graphics"
+				},
+				{
+					"slug": "color-grading",
+					"label": "Color Grading"
+				},
+				{
+					"slug": "photo-retouching",
+					"label": "Photo Retouching"
+				},
+				{
+					"slug": "cheatsheet",
+					"label": "Cheatsheet"
+				},
+				{
+					"slug": "free-resources",
+					"label": "Free Resources"
 				},
 				{
 					"slug": "tools",
 					"label": "Tools"
-				},
-				{
-					"slug": "creativity",
-					"label": "Creativity"
 				}
 			]
 		}
