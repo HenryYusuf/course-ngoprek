@@ -7,6 +7,7 @@ import {
 	decodeSlug,
 	getSiteSettings,
 } from "emdash";
+import { markdownToPortableText } from "emdash/client";
 import { Image, PortableText, WidgetArea } from "emdash/ui";
 import { Comments, CommentForm } from "emdash/ui/comments";
 import Base from "../../layouts/Base.astro";
@@ -228,7 +229,11 @@ const publishDate =
 				</header>
 
 				<div class="article-content">
-					<PortableText value={post.data.content} />
+					<PortableText
+						value={typeof post.data.content === "string"
+							? markdownToPortableText(post.data.content)
+							: post.data.content}
+					/>
 				</div>
 
 				<div class="article-comments">

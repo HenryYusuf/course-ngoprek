@@ -531,6 +531,100 @@
 						}
 					]
 				}
+			},
+			{
+				"id": "dmca-disclaimer",
+				"slug": "dmca-disclaimer",
+				"status": "published",
+				"data": {
+					"title": "DMCA / Disclaimer Copyright",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Terakhir diperbarui: 11 Oktober 2026. Course Ngoprek menghormati hak kekayaan intelektual pihak lain dan berkomitmen mematuhi ketentuan DMCA serta regulasi hak cipta yang berlaku.",
+									"_key": "dmca-c1"
+								}
+							],
+							"_key": "dmca-b1"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1. Hak Cipta & Pembelajaran",
+									"_key": "dmca-c2"
+								}
+							],
+							"_key": "dmca-b2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Seluruh materi orisinal, modul, dan artikel adalah hak cipta Course Ngoprek. Kode contoh dapat digunakan bebas untuk belajar, namun penggandaan materi artikel secara utuh tanpa izin dilarang.",
+									"_key": "dmca-c3"
+								}
+							],
+							"_key": "dmca-b3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2. Disclaimer Merek Dagang & Fair Use",
+									"_key": "dmca-c4"
+								}
+							],
+							"_key": "dmca-b4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Merek dagang, logo, dan nama teknologi pihak ketiga (Python, Astro, Docker, dll.) adalah milik pemilik resminya masing-masing dan digunakan murni untuk tujuan identifikasi serta edukasi (Fair Use).",
+									"_key": "dmca-c5"
+								}
+							],
+							"_key": "dmca-b5"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "3. Pengajuan DMCA Notice & Kontak",
+									"_key": "dmca-c6"
+								}
+							],
+							"_key": "dmca-b6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Jika menemukan materi yang melanggar hak cipta Anda, kirimkan pemberitahuan resmi beserta tautan bukti melalui halaman kontak kami untuk segera kami tindaklanjuti.",
+									"_key": "dmca-c7"
+								}
+							],
+							"_key": "dmca-b7"
+						}
+					]
+				}
 			}
 		],
 		"posts": [
