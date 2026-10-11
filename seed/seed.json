@@ -86,6 +86,44 @@
 				{
 					"slug": "notes",
 					"label": "Notes"
+				},
+				{
+					"slug": "pemrograman-it",
+					"label": "Pemrograman & IT"
+				},
+				{
+					"slug": "python",
+					"label": "Python",
+					"parent": "pemrograman-it"
+				},
+				{
+					"slug": "web-dev",
+					"label": "Web Dev",
+					"parent": "pemrograman-it"
+				},
+				{
+					"slug": "database",
+					"label": "Database",
+					"parent": "pemrograman-it"
+				},
+				{
+					"slug": "desain-multimedia",
+					"label": "Desain & Multimedia"
+				},
+				{
+					"slug": "ui-ux",
+					"label": "UI/UX",
+					"parent": "desain-multimedia"
+				},
+				{
+					"slug": "video-editing",
+					"label": "Video Editing",
+					"parent": "desain-multimedia"
+				},
+				{
+					"slug": "photoshop",
+					"label": "Photoshop",
+					"parent": "desain-multimedia"
 				}
 			]
 		},
@@ -140,13 +178,52 @@
 				},
 				{
 					"type": "custom",
-					"label": "About",
-					"url": "/pages/about"
+					"label": "Pemrograman & IT",
+					"url": "/category/pemrograman-it",
+					"children": [
+						{
+							"type": "custom",
+							"label": "Python",
+							"url": "/category/python"
+						},
+						{
+							"type": "custom",
+							"label": "Web Dev",
+							"url": "/category/web-dev"
+						},
+						{
+							"type": "custom",
+							"label": "Database",
+							"url": "/category/database"
+						}
+					]
 				},
 				{
 					"type": "custom",
-					"label": "Posts",
-					"url": "/posts"
+					"label": "Desain & Multimedia",
+					"url": "/category/desain-multimedia",
+					"children": [
+						{
+							"type": "custom",
+							"label": "UI/UX",
+							"url": "/category/ui-ux"
+						},
+						{
+							"type": "custom",
+							"label": "Video Editing",
+							"url": "/category/video-editing"
+						},
+						{
+							"type": "custom",
+							"label": "Photoshop",
+							"url": "/category/photoshop"
+						}
+					]
+				},
+				{
+					"type": "custom",
+					"label": "About",
+					"url": "/pages/about"
 				}
 			]
 		}

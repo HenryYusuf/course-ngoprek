@@ -134,15 +134,39 @@ const isLoggedIn = !!Astro.locals.user;
 					<div class="nav-links">
 						{
 							menu?.items.map((item) => (
-								<a
-									href={item.url}
-									target={item.target}
-									rel={
-										item.target === "_blank" ? "noopener noreferrer" : undefined
-									}
-								>
-									{item.label}
-								</a>
+								<div class={`nav-item ${item.children?.length ? "has-children" : ""}`}>
+									<a
+										href={item.url}
+										target={item.target}
+										rel={
+											item.target === "_blank" ? "noopener noreferrer" : undefined
+										}
+									>
+										{item.label}
+										{item.children?.length > 0 && (
+											<span class="nav-caret" aria-hidden="true">▾</span>
+										)}
+									</a>
+									{item.children && item.children.length > 0 && (
+										<ul class="nav-dropdown">
+											{item.children.map((child) => (
+												<li>
+													<a
+														href={child.url}
+														target={child.target}
+														rel={
+															child.target === "_blank"
+																? "noopener noreferrer"
+																: undefined
+														}
+													>
+														{child.label}
+													</a>
+												</li>
+											))}
+										</ul>
+									)}
+								</div>
 							))
 						}
 					</div>
@@ -197,6 +221,25 @@ const isLoggedIn = !!Astro.locals.user;
 										>
 											{item.label}
 										</a>
+										{item.children && item.children.length > 0 && (
+											<ul class="footer-sublinks">
+												{item.children.map((child) => (
+													<li>
+														<a
+															href={child.url}
+															target={child.target}
+															rel={
+																child.target === "_blank"
+																	? "noopener noreferrer"
+																	: undefined
+															}
+														>
+															{child.label}
+														</a>
+													</li>
+												))}
+											</ul>
+										)}
 									</li>
 								))
 							}
@@ -513,12 +556,80 @@ const isLoggedIn = !!Astro.locals.user;
 				display: flex;
 				gap: var(--spacing-5);
 				font-size: var(--font-size-sm);
+				align-items: center;
 			}
 
-			.nav-links a {
+			.nav-item {
+				position: relative;
+				display: flex;
+				align-items: center;
+			}
+
+			.nav-item > a {
+				display: inline-flex;
+				align-items: center;
+				gap: var(--spacing-1);
+				padding: var(--spacing-2) 0;
 				text-decoration: none;
 				color: var(--color-text);
 				transition: color var(--transition-fast);
+			}
+
+			.nav-caret {
+				font-size: 0.7em;
+				opacity: 0.7;
+				transition: transform var(--transition-fast);
+			}
+
+			.nav-item:hover .nav-caret,
+			.nav-item:focus-within .nav-caret {
+				transform: rotate(180deg);
+			}
+
+			.nav-dropdown {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				min-width: 190px;
+				background: var(--color-bg);
+				border: 1px solid var(--color-border);
+				border-radius: var(--radius-lg);
+				box-shadow: var(--shadow-lg);
+				padding: var(--spacing-2) 0;
+				list-style: none;
+				margin: 0;
+				opacity: 0;
+				visibility: hidden;
+				transform: translateY(6px);
+				transition:
+					opacity var(--transition-base),
+					transform var(--transition-base),
+					visibility var(--transition-base);
+				z-index: 100;
+			}
+
+			.nav-item:hover .nav-dropdown,
+			.nav-item:focus-within .nav-dropdown {
+				opacity: 1;
+				visibility: visible;
+				transform: translateY(0);
+			}
+
+			.nav-dropdown li a {
+				display: block;
+				padding: var(--spacing-2) var(--spacing-4);
+				color: var(--color-text-secondary);
+				text-decoration: none;
+				font-size: var(--font-size-sm);
+				transition:
+					background var(--transition-fast),
+					color var(--transition-fast);
+			}
+
+			.nav-dropdown li a:hover,
+			.nav-dropdown li a:focus {
+				background: var(--color-surface);
+				color: var(--color-brand);
 			}
 
 			.nav-links a:hover {
@@ -705,6 +816,26 @@ const isLoggedIn = !!Astro.locals.user;
 
 			.footer-links li {
 				margin-bottom: var(--spacing-2);
+			}
+
+			.footer-sublinks {
+				list-style: none;
+				padding-left: var(--spacing-3);
+				margin-top: var(--spacing-1);
+				border-left: 1px solid var(--color-border);
+			}
+
+			.footer-sublinks li {
+				margin-bottom: var(--spacing-1);
+			}
+
+			.footer-sublinks a {
+				font-size: var(--font-size-xs);
+				color: var(--color-muted);
+			}
+
+			.footer-sublinks a:hover {
+				color: var(--color-text);
 			}
 
 			.footer-links a {
