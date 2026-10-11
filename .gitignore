@@ -3,7 +3,7 @@ dist
 .astro
 .emdash/migrations.json
 uploads
-data.db
+data.db*
 
 # Environment
 .env
