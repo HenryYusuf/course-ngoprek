@@ -4,6 +4,8 @@ import { defineConfig, fontProviders } from "astro/config";
 import emdash, { local } from "emdash/astro";
 import { sqlite } from "emdash/db";
 
+const dataDir = process.env.EMDASH_DATA_DIR || ".";
+
 export default defineConfig({
 	output: "server",
 	adapter: node({
@@ -16,9 +18,9 @@ export default defineConfig({
 	integrations: [
 		react(),
 		emdash({
-			database: sqlite({ url: "file:./data.db" }),
+			database: sqlite({ url: `file:${dataDir}/data.db` }),
 			storage: local({
-				directory: "./uploads",
+				directory: `${dataDir}/uploads`,
 				baseUrl: "/_emdash/api/media/file",
 			}),
 		}),

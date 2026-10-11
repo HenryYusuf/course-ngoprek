@@ -1,0 +1,38 @@
+# VCS and tooling not needed inside the image
+.git
+.github
+.vscode
+.claude
+.cursor
+.agents
+.freebuff
+docs
+*.md
+
+# Secrets stay on the host / Coolify env, never in the image
+.env
+.env.*
+!.env.example
+
+# Local data (mounted as a volume at runtime, not baked into the image)
+data
+data.db
+data.db-shm
+data.db-wal
+uploads
+
+# Local build artifacts (rebuilt inside the image)
+node_modules
+dist
+.astro
+*.log
+
+# Tests are not part of the production build
+tests
+**/*.test.js
+
+# These files define the build itself, not the app
+Dockerfile
+docker-compose.yml
+compose.yaml
+.dockerignore
