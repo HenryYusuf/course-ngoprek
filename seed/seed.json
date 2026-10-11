@@ -391,6 +391,146 @@
 						}
 					]
 				}
+			},
+			{
+				"id": "privacy-policy",
+				"slug": "privacy-policy",
+				"status": "published",
+				"data": {
+					"title": "Privacy Policy",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Terakhir diperbarui: 11 Oktober 2026. Selamat datang di Course Ngoprek. Kami sangat menghargai privasi Anda dan berkomitmen penuh untuk melindungi informasi pribadi yang Anda berikan.",
+									"_key": "pp-c1"
+								}
+							],
+							"_key": "pp-b1"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1. Informasi yang Kami Kumpulkan",
+									"_key": "pp-c2"
+								}
+							],
+							"_key": "pp-b2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Kami mengumpulkan informasi kontak seperti nama dan email saat Anda menghubungi kami melalui formulir kontak. Kami juga mencatat data analitik standar server web demi performa dan stabilitas.",
+									"_key": "pp-c3"
+								}
+							],
+							"_key": "pp-b3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2. Penggunaan Informasi & Keamanan",
+									"_key": "pp-c4"
+								}
+							],
+							"_key": "pp-b4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Data Anda digunakan untuk merespons pertanyaan dan mengamankan situs. Kami tidak menjual informasi pribadi kepada pihak ketiga.",
+									"_key": "pp-c5"
+								}
+							],
+							"_key": "pp-b5"
+						}
+					]
+				}
+			},
+			{
+				"id": "terms-of-service",
+				"slug": "terms-of-service",
+				"status": "published",
+				"data": {
+					"title": "Terms of Service",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Terakhir diperbarui: 11 Oktober 2026. Dengan mengakses Course Ngoprek, Anda menyetujui ketentuan layanan dan syarat penggunaan situs web kami.",
+									"_key": "tos-c1"
+								}
+							],
+							"_key": "tos-b1"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "1. Penggunaan Konten & Hak Cipta",
+									"_key": "tos-c2"
+								}
+							],
+							"_key": "tos-b2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Tutorial dan panduan disediakan untuk edukasi. Anda bebas menggunakan kode contoh untuk pembelajaran Anda, namun tidak diperkenankan mempublikasikan ulang artikel secara utuh tanpa atribusi.",
+									"_key": "tos-c3"
+								}
+							],
+							"_key": "tos-b3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "2. Batasan Tanggung Jawab",
+									"_key": "tos-c4"
+								}
+							],
+							"_key": "tos-b4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Seluruh materi disediakan sebagaimana adanya (as-is). Kami senantiasa berupaya menyediakan materi akurat dan berkualitas untuk komunitas.",
+									"_key": "tos-c5"
+								}
+							],
+							"_key": "tos-b5"
+						}
+					]
+				}
 			}
 		],
 		"posts": [

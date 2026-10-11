@@ -68,18 +68,32 @@ const seo = getSeoMeta(page, {
 
 	.page-content :global(p) {
 		margin-bottom: 1.5em;
+		line-height: var(--leading-relaxed, 1.7);
+	}
+
+	.page-content :global(a) {
+		color: var(--color-brand);
+		text-decoration: underline;
+		text-underline-offset: 3px;
+		transition: color 0.15s ease;
+	}
+
+	.page-content :global(a:hover) {
+		color: var(--color-brand-hover);
 	}
 
 	.page-content :global(h2) {
 		font-size: var(--font-size-2xl);
 		margin-top: 2em;
 		margin-bottom: 0.75em;
+		line-height: var(--leading-tight);
 	}
 
 	.page-content :global(h3) {
 		font-size: var(--font-size-xl);
 		margin-top: 1.75em;
 		margin-bottom: 0.5em;
+		line-height: var(--leading-tight);
 	}
 
 	.page-content :global(blockquote) {
@@ -116,6 +130,7 @@ const seo = getSeoMeta(page, {
 	.page-content :global(ol) {
 		margin-bottom: 1.5em;
 		padding-left: var(--spacing-5);
+		line-height: var(--leading-relaxed, 1.7);
 	}
 
 	.page-content :global(li) {
