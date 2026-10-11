@@ -421,7 +421,7 @@
 				"slug": "about",
 				"status": "published",
 				"data": {
-					"title": "About",
+					"title": "Tentang Course Ngoprek",
 					"content": [
 						{
 							"_type": "block",
@@ -429,11 +429,23 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "A place for writing about software, design, and the occasional stray thought. No posting schedule, no newsletter funnel. Just things I wanted to write down.",
-									"_key": "k1"
+									"text": "Selamat datang di Course Ngoprek — platform belajar, eksplorasi, dan berbagi wawasan seputar teknologi, pemrograman, serta desain kreatif digital.",
+									"_key": "ab-c1"
 								}
 							],
-							"_key": "k0"
+							"_key": "ab-b1"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Misi Kami",
+									"_key": "ab-c2"
+								}
+							],
+							"_key": "ab-b2"
 						},
 						{
 							"_type": "block",
@@ -441,11 +453,111 @@
 							"children": [
 								{
 									"_type": "span",
-									"text": "Built with Astro and EmDash. The source is open if you want to see how it works.",
-									"_key": "k3"
+									"text": "Kata \"ngoprek\" mencerminkan semangat rasa ingin tahu, eksperimen langsung, dan belajar dengan praktik nyata. Misi kami adalah menyajikan materi edukasi yang mudah dipahami, relevan dengan kebutuhan industri, dan dapat langsung diaplikasikan oleh pemula maupun praktisi.",
+									"_key": "ab-c3"
 								}
 							],
-							"_key": "k2"
+							"_key": "ab-b3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Fokus Materi & Pembelajaran",
+									"_key": "ab-c4"
+								}
+							],
+							"_key": "ab-b4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Kami memfokuskan konten pada dua pilar utama perkembangan digital masa kini:",
+									"_key": "ab-c5"
+								}
+							],
+							"_key": "ab-b5"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"text": "Pemrograman & IT: Meliputi pengembangan Web (Frontend & Backend), bahasa pemrograman Python, JavaScript/TypeScript, arsitektur database, dan tips otomasi.",
+									"_key": "ab-c6"
+								}
+							],
+							"_key": "ab-b6"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"listItem": "bullet",
+							"level": 1,
+							"children": [
+								{
+									"_type": "span",
+									"text": "Desain & Multimedia: Panduan UI/UX Design, pengolahan visual menggunakan Adobe Photoshop, teknik video editing, motion graphics, serta aset kreatif digital.",
+									"_key": "ab-c7"
+								}
+							],
+							"_key": "ab-b7"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Kenapa Belajar Bersama Kami?",
+									"_key": "ab-c8"
+								}
+							],
+							"_key": "ab-b8"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Setiap tutorial, studi kasus, dan cheatsheet dirancang secara sistematis tanpa basa-basi berlebih. Kami percaya bahwa cara terbaik menguasai sebuah keahlian adalah dengan langsung membangun proyek dan memecahkan tantangan nyata.",
+									"_key": "ab-c9"
+								}
+							],
+							"_key": "ab-b9"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Terhubung dengan Kami",
+									"_key": "ab-c10"
+								}
+							],
+							"_key": "ab-b10"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Punya pertanyaan seputar materi, saran topik, atau peluang kolaborasi? Jangan ragu untuk menghubungi kami melalui halaman Kontak. Mari belajar dan terus ngoprek bersama!",
+									"_key": "ab-c11"
+								}
+							],
+							"_key": "ab-b11"
 						}
 					]
 				}
