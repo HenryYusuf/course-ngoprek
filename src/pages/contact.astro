@@ -1,0 +1,344 @@
+---
+export const prerender = false;
+
+import Base from "../layouts/Base.astro";
+
+let status: "idle" | "success" | "error" = "idle";
+let errorMessage = "";
+let formData = {
+	name: "",
+	email: "",
+	subject: "",
+	message: "",
+};
+
+if (Astro.request.method === "POST") {
+	try {
+		const rawData = await Astro.request.formData();
+		formData = {
+			name: (rawData.get("name")?.toString() || "").trim(),
+			email: (rawData.get("email")?.toString() || "").trim(),
+			subject: (rawData.get("subject")?.toString() || "").trim(),
+			message: (rawData.get("message")?.toString() || "").trim(),
+		};
+
+		// Validasi dasar
+		if (!formData.name || !formData.email || !formData.message) {
+			status = "error";
+			errorMessage = "Harap isi semua kolom yang wajib diisi (Nama, Email, dan Pesan).";
+		} else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+			status = "error";
+			errorMessage = "Format alamat email tidak valid.";
+		} else {
+			// Simulasi penanganan pesan (bisa diteruskan ke Webhook, Email API seperti Resend, atau disimpan)
+			console.log("Pesan Kontak Diterima:", formData);
+
+			status = "success";
+			// Reset form jika sukses
+			formData = { name: "", email: "", subject: "", message: "" };
+		}
+	} catch (e: any) {
+		status = "error";
+		errorMessage = "Terjadi kesalahan saat memproses pesan Anda. Silakan coba lagi.";
+	}
+}
+---
+
+<Base
+	title="Hubungi Kami"
+	description="Kirimkan pertanyaan, saran, atau kolaborasi kepada kami melalui formulir kontak."
+>
+	<div class="contact-container">
+		<header class="contact-header">
+			<span class="contact-badge">Kontak & Kolaborasi</span>
+			<h1 class="contact-title">Hubungi Kami</h1>
+			<p class="contact-subtitle">
+				Punya pertanyaan, feedback, atau peluang kolaborasi? Jangan ragu untuk mengirimkan pesan melalui formulir di bawah ini.
+			</p>
+		</header>
+
+		<div class="contact-card">
+			{
+				status === "success" && (
+					<div class="alert alert-success" role="alert">
+						<svg class="alert-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+						</svg>
+						<div>
+							<h3 class="alert-title">Pesan Berhasil Terkirim!</h3>
+							<p>Terima kasih telah menghubungi kami. Kami akan segera merespons pesan Anda sesegera mungkin.</p>
+						</div>
+					</div>
+				)
+			}
+
+			{
+				status === "error" && (
+					<div class="alert alert-error" role="alert">
+						<svg class="alert-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+						</svg>
+						<div>
+							<h3 class="alert-title">Pengiriman Gagal</h3>
+							<p>{errorMessage}</p>
+						</div>
+					</div>
+				)
+			}
+
+			<form method="POST" class="contact-form" novalidate>
+				<div class="form-row">
+					<div class="form-group">
+						<label for="contact-name" class="form-label">
+							Nama Lengkap <span class="required">*</span>
+						</label>
+						<input
+							type="text"
+							id="contact-name"
+							name="name"
+							value={formData.name}
+							required
+							placeholder="Nama Anda"
+							class="form-input"
+							autocomplete="name"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="contact-email" class="form-label">
+							Alamat Email <span class="required">*</span>
+						</label>
+						<input
+							type="email"
+							id="contact-email"
+							name="email"
+							value={formData.email}
+							required
+							placeholder="nama@email.com"
+							class="form-input"
+							autocomplete="email"
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="contact-subject" class="form-label">Subjek</label>
+					<input
+						type="text"
+						id="contact-subject"
+						name="subject"
+						value={formData.subject}
+						placeholder="Topik atau pertanyaan Anda"
+						class="form-input"
+					/>
+				</div>
+
+				<div class="form-group">
+					<label for="contact-message" class="form-label">
+						Pesan <span class="required">*</span>
+					</label>
+					<textarea
+						id="contact-message"
+						name="message"
+						rows="6"
+						required
+						placeholder="Tuliskan pesan lengkap Anda di sini..."
+						class="form-textarea"
+					>{formData.message}</textarea>
+				</div>
+
+				<button type="submit" class="submit-button">
+					<span>Kirim Pesan</span>
+					<svg class="button-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+					</svg>
+				</button>
+			</form>
+		</div>
+	</div>
+</Base>
+
+<style>
+	.contact-container {
+		max-width: 760px;
+		margin: 0 auto;
+		padding: var(--spacing-16) var(--spacing-6);
+	}
+
+	.contact-header {
+		text-align: center;
+		margin-bottom: var(--spacing-12);
+	}
+
+	.contact-badge {
+		display: inline-block;
+		font-size: var(--font-size-xs);
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: var(--tracking-wider);
+		color: var(--color-brand);
+		margin-bottom: var(--spacing-3);
+	}
+
+	.contact-title {
+		font-size: clamp(var(--font-size-3xl), 4vw, var(--font-size-4xl));
+		font-weight: var(--font-weight-display);
+		letter-spacing: var(--tracking-tight);
+		line-height: var(--leading-tight);
+		margin: 0 0 var(--spacing-4);
+	}
+
+	.contact-subtitle {
+		font-size: var(--font-size-lg);
+		color: var(--color-text-secondary);
+		line-height: var(--leading-relaxed);
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	.contact-card {
+		background: var(--color-surface);
+		border: 1px solid var(--color-border);
+		border-radius: calc(var(--radius) * 1.5);
+		padding: var(--spacing-8);
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+	}
+
+	@media (max-width: 640px) {
+		.contact-card {
+			padding: var(--spacing-6);
+		}
+	}
+
+	.alert {
+		display: flex;
+		align-items: flex-start;
+		gap: var(--spacing-4);
+		padding: var(--spacing-4) var(--spacing-5);
+		border-radius: var(--radius);
+		margin-bottom: var(--spacing-8);
+		font-size: var(--font-size-sm);
+		line-height: var(--leading-normal);
+	}
+
+	.alert-icon {
+		width: 1.25rem;
+		height: 1.25rem;
+		flex-shrink: 0;
+		margin-top: 2px;
+	}
+
+	.alert-title {
+		font-weight: var(--font-weight-heading);
+		margin: 0 0 0.25rem;
+		font-size: var(--font-size-sm);
+	}
+
+	.alert-success {
+		background: color-mix(in srgb, #10b981 12%, transparent);
+		border: 1px solid color-mix(in srgb, #10b981 30%, transparent);
+		color: light-dark(#065f46, #34d399);
+	}
+
+	.alert-error {
+		background: color-mix(in srgb, #ef4444 12%, transparent);
+		border: 1px solid color-mix(in srgb, #ef4444 30%, transparent);
+		color: light-dark(#991b1b, #f87171);
+	}
+
+	.contact-form {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-6);
+	}
+
+	.form-row {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: var(--spacing-6);
+	}
+
+	@media (min-width: 640px) {
+		.form-row {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	.form-group {
+		display: flex;
+		flex-direction: column;
+		gap: var(--spacing-2);
+	}
+
+	.form-label {
+		font-size: var(--font-size-sm);
+		font-weight: var(--font-weight-heading);
+		color: var(--color-text);
+	}
+
+	.required {
+		color: #ef4444;
+	}
+
+	.form-input,
+	.form-textarea {
+		width: 100%;
+		padding: 0.75rem 1rem;
+		border: 1px solid var(--color-border);
+		background: var(--color-bg);
+		color: var(--color-text);
+		border-radius: var(--radius);
+		font-family: inherit;
+		font-size: var(--font-size-base);
+		transition: border-color 0.2s ease, box-shadow 0.2s ease;
+		box-sizing: border-box;
+	}
+
+	.form-input:focus,
+	.form-textarea:focus {
+		outline: none;
+		border-color: var(--color-brand);
+		box-shadow: 0 0 0 3px var(--color-brand-ring);
+	}
+
+	.form-textarea {
+		resize: vertical;
+		min-height: 120px;
+	}
+
+	.submit-button {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: var(--spacing-2);
+		background: var(--color-brand);
+		color: var(--color-on-brand);
+		font-size: var(--font-size-base);
+		font-weight: var(--font-weight-heading);
+		padding: 0.85rem 1.75rem;
+		border-radius: var(--radius);
+		border: none;
+		cursor: pointer;
+		transition: background-color 0.2s ease, transform 0.1s ease;
+		align-self: flex-start;
+		margin-top: var(--spacing-2);
+	}
+
+	.submit-button:hover {
+		background: var(--color-brand-hover);
+	}
+
+	.submit-button:active {
+		transform: scale(0.98);
+	}
+
+	.button-icon {
+		width: 1.125rem;
+		height: 1.125rem;
+		transition: transform 0.2s ease;
+	}
+
+	.submit-button:hover .button-icon {
+		transform: translateX(3px);
+	}
+</style>

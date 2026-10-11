@@ -224,6 +224,11 @@
 					"type": "custom",
 					"label": "About",
 					"url": "/pages/about"
+				},
+				{
+					"type": "custom",
+					"label": "Contact",
+					"url": "/contact"
 				}
 			]
 		}
