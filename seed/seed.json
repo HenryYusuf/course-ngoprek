@@ -685,6 +685,435 @@
 				}
 			}
 		],
-		"posts": []
+		"posts": [
+			{
+				"id": "post-1",
+				"slug": "panduan-lengkap-python-untuk-pemula",
+				"status": "published",
+				"data": {
+					"title": "Panduan Lengkap Belajar Python dari Dasar untuk Pemula",
+					"excerpt": "Pelajari dasar-dasar pemrograman Python mulai dari variabel, struktur data dasar, hingga logika percabangan untuk pemula.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Python merupakan salah satu bahasa pemrograman paling populer dan ramah pemula di dunia saat ini. Sintaksnya yang bersih dan mudah dibaca membuat proses belajar coding menjadi jauh lebih menyenangkan.",
+									"_key": "p1-c1"
+								}
+							],
+							"_key": "p1-b1"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Mengapa Memilih Python?",
+									"_key": "p1-c2"
+								}
+							],
+							"_key": "p1-b2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Selain sintaksnya yang sederhana, Python memiliki ekosistem pustaka (library) yang sangat luas. Anda dapat menggunakannya untuk web development, otomatisasi script, data science, hingga machine learning.",
+									"_key": "p1-c3"
+								}
+							],
+							"_key": "p1-b3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Langkah Awal Menulis Kode",
+									"_key": "p1-c4"
+								}
+							],
+							"_key": "p1-b4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Mulailah dengan memahami tipe data dasar seperti integer, float, string, serta boolean. Setelah itu, pelajari manipulasi list dan dictionary sebelum beralih ke pembuatan fungsi sendiri.",
+									"_key": "p1-c5"
+								}
+							],
+							"_key": "p1-b5"
+						}
+					]
+				},
+				"bylines": [
+					{
+						"byline": "byline-editorial"
+					}
+				],
+				"taxonomies": {
+					"category": [
+						"python"
+					],
+					"tag": [
+						"tutorial",
+						"pemula"
+					]
+				}
+			},
+			{
+				"id": "post-2",
+				"slug": "membangun-web-modern-dengan-frontend-framework",
+				"status": "published",
+				"data": {
+					"title": "Membangun Web Modern: Arsitektur Frontend dan Best Practices",
+					"excerpt": "Eksplorasi strategi arsitektur modern dalam web development menggunakan TypeScript, arsitektur berbasis komponen, dan optimasi performa.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Perkembangan ekosistem pengembangan web modern menuntut kita untuk membangun antarmuka yang cepat, mudah dipelihara, dan dapat diandalkan oleh pengguna di berbagai perangkat.",
+									"_key": "p2-c1"
+								}
+							],
+							"_key": "p2-b1"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Kekuatan TypeScript dalam Skala Besar",
+									"_key": "p2-c2"
+								}
+							],
+							"_key": "p2-b2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Penggunaan TypeScript memastikan tipe data terdefinisi secara ketat, meminimalkan potensi runtime bugs, serta memberikan pengalaman developer (DX) yang jauh lebih mulus saat refactoring.",
+									"_key": "p2-c3"
+								}
+							],
+							"_key": "p2-b3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Tips Optimasi Loading",
+									"_key": "p2-c4"
+								}
+							],
+							"_key": "p2-b4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Gunakan code splitting, lazy loading untuk aset gambar, serta minimalkan payload JavaScript yang dikirim ke browser dengan memanfaatkan render berbasis server.",
+									"_key": "p2-c5"
+								}
+							],
+							"_key": "p2-b5"
+						}
+					]
+				},
+				"bylines": [
+					{
+						"byline": "byline-editorial"
+					}
+				],
+				"taxonomies": {
+					"category": [
+						"web-dev"
+					],
+					"tag": [
+						"frontend",
+						"typescript",
+						"tips-tricks"
+					]
+				}
+			},
+			{
+				"id": "post-3",
+				"slug": "optimasi-query-sql-dan-desain-database",
+				"status": "published",
+				"data": {
+					"title": "Optimasi Query SQL dan Desain Database Relasional yang Efisien",
+					"excerpt": "Panduan praktis indexing, normalisasi data, dan teknik penulisan query SQL yang cepat untuk beban kerja backend performa tinggi.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Database sering kali menjadi bottleneck utama dalam performa aplikasi web. Memahami cara mesin database mengeksekusi query adalah kunci untuk menjaga kecepatan respons aplikasi.",
+									"_key": "p3-c1"
+								}
+							],
+							"_key": "p3-b1"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Peran Strategis Indexing",
+									"_key": "p3-c2"
+								}
+							],
+							"_key": "p3-b2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Menambahkan index pada kolom yang sering dijadikan filter WHERE atau join relasi dapat memangkas waktu pencarian data secara dramatis, menghindari operasi full-table scan.",
+									"_key": "p3-c3"
+								}
+							],
+							"_key": "p3-b3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Menghindari Masalah N+1",
+									"_key": "p3-c4"
+								}
+							],
+							"_key": "p3-b4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Pastikan relasi data diambil secara efisien dengan JOIN atau eager loading dari ORM untuk mencegah ratusan query kecil dieksekusi secara beruntun.",
+									"_key": "p3-c5"
+								}
+							],
+							"_key": "p3-b5"
+						}
+					]
+				},
+				"bylines": [
+					{
+						"byline": "byline-editorial"
+					}
+				],
+				"taxonomies": {
+					"category": [
+						"database"
+					],
+					"tag": [
+						"backend",
+						"sql",
+						"tips-tricks"
+					]
+				}
+			},
+			{
+				"id": "post-4",
+				"slug": "dasar-prinsip-ui-ux-dan-design-system",
+				"status": "published",
+				"data": {
+					"title": "Membangun Design System yang Konsisten untuk Produk Digital",
+					"excerpt": "Pelajari fondasi desain UI/UX, penataan token warna dan tipografi, serta penerapan design system yang skalabel.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Design system bukan sekadar kumpulan komponen tombol atau ikon di Figma, melainkan bahasa bersama antara tim desain dan tim engineer dalam membangun produk digital.",
+									"_key": "p4-c1"
+								}
+							],
+							"_key": "p4-b1"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Pondasi Design Token",
+									"_key": "p4-c2"
+								}
+							],
+							"_key": "p4-b2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Token desain seperti warna, spasi (spacing), ukuran font, dan border radius memberikan keseragaman visual di seluruh platform serta mempermudah implementasi dark mode.",
+									"_key": "p4-c3"
+								}
+							],
+							"_key": "p4-b3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Fokus pada Aksesibilitas (a11y)",
+									"_key": "p4-c4"
+								}
+							],
+							"_key": "p4-b4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Pastikan rasio kontras teks memenuhi standar WCAG dan semua elemen interaktif dapat dioperasikan menggunakan keyboard oleh semua pengguna.",
+									"_key": "p4-c5"
+								}
+							],
+							"_key": "p4-b5"
+						}
+					]
+				},
+				"bylines": [
+					{
+						"byline": "byline-editorial"
+					}
+				],
+				"taxonomies": {
+					"category": [
+						"ui-ux"
+					],
+					"tag": [
+						"design-system",
+						"tools"
+					]
+				}
+			},
+			{
+				"id": "post-5",
+				"slug": "teknik-color-grading-dan-workflow-video-editing",
+				"status": "published",
+				"data": {
+					"title": "Teknik Color Grading dan Workflow Efisien dalam Video Editing",
+					"excerpt": "Tingkatkan kualitas visual video Anda dengan pemahaman teori warna, color space log, dan alur editing profesional.",
+					"content": [
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Warna memiliki kekuatan emosional yang besar dalam storytelling video. Melalui color correction dan color grading yang tepat, mood cerita dapat tersampaikan dengan maksimal.",
+									"_key": "p5-c1"
+								}
+							],
+							"_key": "p5-b1"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Koreksi Warna vs Color Grading",
+									"_key": "p5-c2"
+								}
+							],
+							"_key": "p5-b2"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Sebelum memberi nuansa artistik (grading), lakukan koreksi warna dasar terlebih dahulu: seimbangkan exposure, sesuaikan white balance, dan perbaiki skin tone agar alami.",
+									"_key": "p5-c3"
+								}
+							],
+							"_key": "p5-b3"
+						},
+						{
+							"_type": "block",
+							"style": "h2",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Manajemen Aset dan Workflow",
+									"_key": "p5-c4"
+								}
+							],
+							"_key": "p5-b4"
+						},
+						{
+							"_type": "block",
+							"style": "normal",
+							"children": [
+								{
+									"_type": "span",
+									"text": "Gunakan folder project yang terstruktur dan manfaatkan proxy editing bila bekerja dengan footage beresolusi 4K atau codec h.265 yang berat.",
+									"_key": "p5-c5"
+								}
+							],
+							"_key": "p5-b5"
+						}
+					]
+				},
+				"bylines": [
+					{
+						"byline": "byline-editorial"
+					}
+				],
+				"taxonomies": {
+					"category": [
+						"video-editing"
+					],
+					"tag": [
+						"color-grading",
+						"tutorial",
+						"tips-tricks"
+					]
+				}
+			}
+		]
 	}
 }
